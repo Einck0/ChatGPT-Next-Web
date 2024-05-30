@@ -136,6 +136,29 @@ export const KnowledgeCutOffDate: Record<string, string> = {
   "gemini-pro-vision": "2023-12",
 };
 
+// const openaiModels = [
+//   "gpt-3.5-turbo",
+//   "gpt-3.5-turbo-1106",
+//   "gpt-3.5-turbo-0125",
+//   "gpt-4",
+//   "gpt-4-0613",
+//   "gpt-4-32k",
+//   "gpt-4-32k-0613",
+//   "gpt-4-turbo",
+//   "gpt-4-turbo-preview",
+//   "gpt-4o",
+//   "gpt-4o-2024-05-13",
+//   "gpt-4-vision-preview",
+//   "gpt-4-turbo-2024-04-09"
+// ];
+
+// const googleModels = [
+//   "gemini-1.0-pro",
+//   "gemini-1.5-pro-latest",
+//   "gemini-1.5-flash-latest",
+//   "gemini-pro-vision",
+// ];
+
 const openaiModels = [
   "gpt-3.5-turbo",
   "gpt-3.5-turbo-1106",
@@ -149,16 +172,15 @@ const openaiModels = [
   "gpt-4o",
   "gpt-4o-2024-05-13",
   "gpt-4-vision-preview",
-  "gpt-4-turbo-2024-04-09"
+  "gpt-4-turbo-2024-04-09",
+  "gemini-1.5-pro-latest",
+  "gemini-1.5-flash-latest",
+  "gemini-pro-vision"
 ];
 
 const googleModels = [
-  "gemini-1.0-pro",
-//  "gemini-1.5-pro-latest",
-//  "gemini-1.5-flash-latest",
-//  "gemini-pro-vision",
+  "gemini-1.0-pro"
 ];
-
 const anthropicModels = [
   "claude-instant-1.2",
   "claude-2.0",
@@ -168,48 +190,37 @@ const anthropicModels = [
   "claude-3-haiku-20240307",
 ];
 
-/*
+// export const DEFAULT_MODELS = [
+//   ...openaiModels.map((name) => ({
+//     name,
+//     available: true,
+//     provider: {
+//       id: "openai",
+//       providerName: "OpenAI",
+//       providerType: "openai",
+//     },
+//   })),
+//   ...googleModels.map((name) => ({
+//     name,
+//     available: true,
+//     provider: {
+//       id: "google",
+//       providerName: "Google",
+//       providerType: "google",
+//     },
+//   })),
+//   ...anthropicModels.map((name) => ({
+//     name,
+//     available: true,
+//     provider: {
+//       id: "anthropic",
+//       providerName: "Anthropic",
+//       providerType: "anthropic",
+//     },
+//   })),
+// ] as const;
 export const DEFAULT_MODELS = [
   ...openaiModels.map((name) => ({
-    name,
-    available: true,
-    provider: {
-      id: "openai",
-      providerName: "OpenAI",
-      providerType: "openai",
-    },
-  })),
-  ...googleModels.map((name) => ({
-    name,
-    available: true,
-    provider: {
-      id: "google",
-      providerName: "Google",
-      providerType: "google",
-    },
-  })),
-  ...anthropicModels.map((name) => ({
-    name,
-    available: true,
-    provider: {
-      id: "anthropic",
-      providerName: "Anthropic",
-      providerType: "anthropic",
-    },
-  })),
-] as const;
-*/
-export const DEFAULT_MODELS = [
-  ...openaiModels.map((name) => ({
-    name,
-    available: true,
-    provider: {
-      id: "openai",
-      providerName: "OpenAI",
-      providerType: "openai",
-    },
-  })),
-  ...googleModels.map((name) => ({
     name,
     available: true,
     provider: {
@@ -228,7 +239,6 @@ export const DEFAULT_MODELS = [
     },
   })),
 ] as const;
-
 export const CHAT_PAGE_SIZE = 15;
 export const MAX_RENDER_MSG_COUNT = 45;
 
