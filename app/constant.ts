@@ -22,7 +22,6 @@ export enum Path {
   Masks = "/masks",
   Auth = "/auth",
 }
-
 export enum ApiPath {
   Cors = "",
   OpenAI = "/api/openai",
