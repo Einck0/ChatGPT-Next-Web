@@ -168,6 +168,7 @@ const anthropicModels = [
   "claude-3-haiku-20240307",
 ];
 
+/*
 export const DEFAULT_MODELS = [
   ...openaiModels.map((name) => ({
     name,
@@ -194,6 +195,36 @@ export const DEFAULT_MODELS = [
       id: "anthropic",
       providerName: "Anthropic",
       providerType: "anthropic",
+    },
+  })),
+] as const;
+*/
+export const DEFAULT_MODELS = [
+  ...openaiModels.map((name) => ({
+    name,
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  })),
+  ...googleModels.map((name) => ({
+    name,
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  })),
+  ...anthropicModels.map((name) => ({
+    name,
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
     },
   })),
 ] as const;
